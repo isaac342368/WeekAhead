@@ -1,0 +1,58 @@
+body {
+    font-family: Arial, sans-serif;
+  }
+  .logo img {
+    max-width: 75px;
+    height: auto;
+  }
+
+  .container {
+    max-width: 400px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #f2f2f2;
+    border-radius: 5px;
+  }
+  .danger {
+      color: red;
+  }
+  .warning {
+      color: yellow;
+  }
+
+  .input-group {
+    margin-bottom: 15px;
+  }
+
+  .input-group label {
+    display: block;
+    margin-bottom: 5px;
+  }
+
+  .input-group input,
+  .input-group select {
+    width: 100%;
+    padding: 5px;
+    border-radius: 3px;
+    border: 1px solid #ccc;
+  }
+
+  .submit-btn {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    background-color: #4CAF50;
+    border: none;
+    color: #fff;
+    text-align: center;
+    text-decoration: none;
+    cursor: pointer;
+    border-radius: 3px;
+  }
+
+  .result {
+    margin-top: 15px;
+    padding: 10px;
+    background-color: #e6e6e6;
+    border-radius: 3px;
+  }
