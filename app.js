@@ -211,6 +211,7 @@ function getWeatherConditionsForAllDays(numDays, city, unit) {
         const activityDate = document.getElementById(`activity-date-${i}`).value;
         const selectedDate = new Date(activityDate);
         const currentDate = new Date();
+        currentDate.setHours(0, 0, 0, 0);
 
         const sevenDaysFromNow = new Date();
         sevenDaysFromNow.setDate(currentDate.getDate() + 7);
@@ -222,16 +223,17 @@ function getWeatherConditionsForAllDays(numDays, city, unit) {
 
         // Check if the date is in the past
         if (selectedDate <= currentDate) {
+            console.log(currentDate);
+            console.log(selectedDate);
             displayError('Error: Date must be in the future.');
             // Reject the promise with an error message
             return Promise.reject('Date must be in the future.');
         }
 
         // Check if the date is in the future
-        if (selectedDate > currentDate) {
-            const promise = getWeatherCondition(city, unit);
-            weatherPromises.push(promise);
-        }
+        const promise = getWeatherCondition(city, unit);
+        weatherPromises.push(promise);
+       
     }
 
 
@@ -248,6 +250,7 @@ function getWeatherCondition(city, unit) {
     let params = new URLSearchParams({access_key: 'd171684972b38dd430db2f91c3564710', query: city, units: unit});
 
     const url = `http://api.weatherstack.com/current?${params}`;
+    //const url = `http://localhost:3000/weather?city=${city}&unit=${unit}`;
 
     return fetch(url).then(res => res.json()).then(weatherCondition => { // console.log(weatherCondition);
         return weatherCondition;
