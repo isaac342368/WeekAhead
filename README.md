@@ -5,6 +5,7 @@ After uses choses dates and fills out time and activity name, the app cross chec
 
 To overcome API restrictions, I leveraged Node.js and Express.js to create a backend server, resolving CORS issues and ensuring a smooth user experience. Deploying the frontend on GitHub Pages further demonstrated my skills in project deployment and sharing web applications with a wider audience.
 
+IMPORTANT:_
 As the API subscription can be expensive and I might not always have it active, I apologize for any inconvenience this may cause during your visit. Thank you for understanding.
 FUTURE:
 Adding traffic information to proivde user with suggestions  on traffic info.
